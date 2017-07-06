@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- css for previews -->
+    <style type="text/css">
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+    <!-- css for cards -->
+    <style type="text/css">
+        .card {
+            font-family: "Hiragino Kaku Gothic Pro", "Meiryo", "Source Han Sans Japanese", "NotoSansCJK", "TakaoPGothic", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+            font-size: 12px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #7DC6D2;
+        }
+
+        .highlighted-word {
+            /*font-weight: bold;*/
+            font-size: 30px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .card-back {}
+
+        .card-front {}
+
+        .divider {
+            height: 1px;
+            width: 100%;
+            background: #62929E;
+            margin: 20px
+        }
+
+        #answer {
+            display: none
+        }
+        /* extras */
+
+        .text-details {
+            margin: 20px;
+            font-size: 18px
+        }
+
+        .text-romaji {}
+
+        .text-mneumonic {}
+
+        .text-kanji {}
+
+        .text-onyomi {
+            margin: 10px;
+            font-size: 12px;
+        }
+
+        .text-kunyomi {
+            margin: 10px;
+            font-size: 12px;
+        }
+
+        .text-image {
+            margin: 20px;
+        }
+
+        .text-stroke-order {}
+
+        .text-audio {}
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preview-card-forwards-front card">
+
+        <div class="card-front">
+            <div class="text-front highlighted-word">
+                {{Front}}
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="preview-card-forwards-back card">
+
+
+        <div class="card-back">
+
+            <div class="text-front">{{FrontSide}}</div>
+
+            <hr id="answer" />
+            <div class="divider"></div>
+
+            <div class="text-back">{{Back}}</div>
+
+            <!-- extra info -->
+
+            <div class="text-details">{{Details}}</div>
+
+            <div class="text-romaji">{{Romaji}}</div>
+
+            <div class="text-mneumonic">{{Mneumonic}}</div>
+
+            <div class="text-kanji">{{Kanji}}</div>
+
+            <div class="text-onyomi">onyomi: <span>{{Onyomi}}</span></div>
+
+            <div class="text-kunyomi">kunyomi: <span>{{Kunyomi}}</span></div>
+
+            <div class="text-image">{{Image}}</div>
+
+            <div class="text-stroke-order">{{Stroke order}}</div>
+
+            <div class="text-audio">{{Audio}}</div>
+
+        </div>
+
+
+        <script>
+            var onyomi = document.querySelector('.text-onyomi');
+            var kunyomi = document.querySelector('.text-kunyomi');
+
+            if (onyomi.getElementsByTagName('span')[0].innerHTML === '') {
+                onyomi.className += ' hidden';
+            }
+
+            if (kunyomi.getElementsByTagName('span')[0].innerHTML ===
+                '') {
+                kunyomi.className += ' hidden';
+            }
+        </script>
+
+    </div>
+
+
+    <div class="preview-card-backwards-front card">
+
+        <div class="card-front">
+            <div class="text-back highlighted-word">
+                {{Back}}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="preview-card-backwards-back card">
+
+
+        <div class="card-back">
+
+            <div class="text-front">{{Front}}</div>
+
+
+            <hr id="answer" />
+            <div class="divider"></div>
+
+            <div class="text-back">{{Back}}</div>
+
+            <!-- extra info -->
+
+            <div class="text-details">{{Details}}</div>
+
+            <div class="text-romaji">{{Romaji}}</div>
+
+            <div class="text-mneumonic">{{Mneumonic}}</div>
+
+            <div class="text-kanji">{{Kanji}}</div>
+
+            <div class="text-onyomi">onyomi: <span>{{Onyomi}}</span></div>
+
+            <div class="text-kunyomi">kunyomi: <span>{{Kunyomi}}</span></div>
+
+            <div class="text-image">{{Image}}</div>
+
+            <div class="text-stroke-order">{{Stroke order}}</div>
+
+            <div class="text-audio">{{Audio}}</div>
+
+        </div>
+
+        <script>
+            var onyomi = document.querySelector('.text-onyomi');
+            var kunyomi = document.querySelector('.text-kunyomi');
+
+            if (onyomi.getElementsByTagName('span')[0].innerHTML === '') {
+                onyomi.className += ' hidden';
+            }
+
+            if (kunyomi.getElementsByTagName('span')[0].innerHTML ===
+                '') {
+                kunyomi.className += ' hidden';
+            }
+        </script>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
